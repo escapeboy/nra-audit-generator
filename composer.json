@@ -1,0 +1,23 @@
+{
+  "name": "escapeboy/ordersodit",
+  "description": "NAP Orders Odit XML File Generator",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikola Katsarov",
+      "email": "katsarov@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Odit\\": "lib/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3"
+  }
+}

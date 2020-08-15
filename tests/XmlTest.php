@@ -23,7 +23,7 @@ final class XmlTest extends TestCase
         $shop->addReturnedOrder($returnedOrder);
 
         $xml = \Odit\XmlConverter::convert($shop);
-        self::assertXmlStringEqualsXmlFile(__DIR__.'/stubs/xml_output.stub', $xml);
+        self::assertXmlStringEqualsXmlFile(__DIR__ . '/stubs/xml_output.stub', (string)$xml);
     }
 
     private function mockShop(): \Odit\Shop
@@ -58,10 +58,10 @@ final class XmlTest extends TestCase
     private function mockItem(string $name, int $quantity, float $price): \Odit\Item
     {
         return new \Odit\Item(
-          $name,
-          $quantity,
-          $price,
-          20
+            $name,
+            $quantity,
+            $price,
+            20
         );
     }
 }

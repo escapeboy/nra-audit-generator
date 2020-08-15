@@ -5,10 +5,18 @@ namespace Odit;
 
 class XmlConverter
 {
-    public static function convert(Shop $shop): string
+    private \XMLWriter $xml;
+
+    private function __construct(\XMLWriter $xml)
+    {
+        $this->xml = $xml;
+    }
+
+    public static function convert(Shop $shop): self
     {
         $xml = new \XMLWriter();
         $xml->openMemory();
+        $xml->setIndent(true);
         $xml->startDocument('1.0', 'windows-1251');
         $xml->startElement('audit');
         $xml->writeElement('eik', $shop->getEik());
@@ -76,6 +84,16 @@ class XmlConverter
 
         $xml->endElement();
 
-        return $xml->outputMemory(true);
+        return new self($xml);
+    }
+
+    public function getXml(): \XMLWriter
+    {
+        return $this->xml;
+    }
+
+    public function __toString()
+    {
+        return $this->xml->outputMemory(true);
     }
 }

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Odit;
+namespace Audit;
 
 class Shop
 {

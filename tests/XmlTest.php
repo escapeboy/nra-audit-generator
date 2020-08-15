@@ -13,22 +13,22 @@ final class XmlTest extends TestCase
         $order->addItem($this->mockItem('сокче', 1, 1));
         $shop->addOrder($order);
 
-        $returnedOrder = new \Odit\ReturnedOrder(
+        $returnedOrder = new \Audit\ReturnedOrder(
             '345345345345',
             5.64,
             new DateTime('2020-04-04'),
-            \Odit\ReturnMethods\Other::class
+            \Audit\ReturnMethods\Other::class
         );
 
         $shop->addReturnedOrder($returnedOrder);
 
-        $xml = \Odit\XmlConverter::convert($shop);
+        $xml = \Audit\XmlConverter::convert($shop);
         self::assertXmlStringEqualsXmlFile(__DIR__ . '/stubs/xml_output.stub', (string)$xml);
     }
 
-    private function mockShop(): \Odit\Shop
+    private function mockShop(): \Audit\Shop
     {
-        return new \Odit\Shop(
+        return new \Audit\Shop(
             '104056065',
             'RF0000020',
             'viky.com',
@@ -39,15 +39,15 @@ final class XmlTest extends TestCase
         );
     }
 
-    private function mockOrder(): \Odit\Order
+    private function mockOrder(): \Audit\Order
     {
-        return new \Odit\Order(
+        return new \Audit\Order(
             'WERWERWERFSADFDFGERTER',
             new DateTime('2020-04-13'),
             '1234567890',
             new DateTime('2020-04-13'),
             0,
-            \Odit\PaymentTypes\VirtualPOSTerminal::class,
+            \Audit\PaymentTypes\VirtualPOSTerminal::class,
             [],
             '222',
             'AS12k5dD',
@@ -55,9 +55,9 @@ final class XmlTest extends TestCase
         );
     }
 
-    private function mockItem(string $name, int $quantity, float $price): \Odit\Item
+    private function mockItem(string $name, int $quantity, float $price): \Audit\Item
     {
-        return new \Odit\Item(
+        return new \Audit\Item(
             $name,
             $quantity,
             $price,

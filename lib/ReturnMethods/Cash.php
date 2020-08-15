@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Odit\ReturnMethods;
+namespace Audit\ReturnMethods;
 
 interface Cash
 {

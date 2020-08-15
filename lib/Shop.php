@@ -24,6 +24,11 @@ class Shop
      */
     private array $orders;
 
+    /**
+     * @var ReturnedOrder[]
+     */
+    private array $returnedOrders;
+
     public function __construct(
         string $eik,
         string $shopUniqueNumber,
@@ -32,7 +37,8 @@ class Shop
         bool $isMarketplace,
         int $year,
         int $month,
-        array $orders = []
+        array $orders = [],
+        array $returnedOrders = []
     ) {
         $this->eik = $eik;
         $this->shopUniqueNumber = $shopUniqueNumber;
@@ -42,6 +48,7 @@ class Shop
         $this->year = $year;
         $this->month = $month;
         $this->orders = $orders;
+        $this->returnedOrders = $returnedOrders;
     }
 
     /**
@@ -106,5 +113,36 @@ class Shop
     public function addOrder(Order $order): void
     {
         $this->orders[] = $order;
+    }
+
+    public function addReturnedOrder(ReturnedOrder $order): void
+    {
+        $this->returnedOrders[] = $order;
+    }
+
+    /**
+     * @return Order[]
+     */
+    public function getOrders(): array
+    {
+        return $this->orders;
+    }
+
+    /**
+     * @return array
+     */
+    public function getReturnedOrders(): array
+    {
+        return $this->returnedOrders;
+    }
+
+    public function getTotalAmountReturnedOrders(): float
+    {
+        $total = 0;
+        foreach($this->returnedOrders as $order){
+            $total+=$order->getOrderAmount();
+        }
+
+        return $total;
     }
 }

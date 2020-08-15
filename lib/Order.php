@@ -136,4 +136,34 @@ class Order
     {
         $this->items[] = $item;
     }
+
+    public function getTotalWithoutVat(): float
+    {
+        $total = 0;
+        foreach($this->items as $item){
+            $total+=$item->getPrice();
+        }
+
+        return $total; //TODO apply discount
+    }
+
+    public function getOrderTotalVat()
+    {
+        $total = 0;
+        foreach($this->items as $item){
+            $total+=$item->getVat();
+        }
+
+        return $total;
+    }
+
+    public function getOrderTotal()
+    {
+        $total = 0;
+        foreach($this->items as $item){
+            $total+=$item->getFinalPrice();
+        }
+
+        return $total; //TODO apply discount
+    }
 }

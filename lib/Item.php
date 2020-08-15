@@ -7,7 +7,7 @@ class Item
 {
     private string $name;
 
-    private int $quantity;
+    private float $quantity;
 
     private float $price;
 
@@ -15,7 +15,7 @@ class Item
 
     public function __construct(
         string $name,
-        int $quantity,
+        float $quantity,
         float $price,
         int $vatRate = 20
     ) {
@@ -34,9 +34,9 @@ class Item
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getQuantity(): int
+    public function getQuantity(): float
     {
         return $this->quantity;
     }
@@ -55,5 +55,15 @@ class Item
     public function getVatRate(): int
     {
         return $this->vatRate;
+    }
+
+    public function getVat(): float
+    {
+        return $this->vatRate * $this->price / 100;
+    }
+
+    public function getFinalPrice(): float
+    {
+        return $this->price * 1+($this->vatRate / 100);
     }
 }

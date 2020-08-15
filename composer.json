@@ -1,6 +1,6 @@
 {
-  "name": "escapeboy/ordersodit",
-  "description": "NAP Orders Odit XML File Generator",
+  "name": "escapeboy/nra-audit-generator",
+  "description": "NRA Orders Audit XML File Generator",
   "type": "library",
   "license": "MIT",
   "authors": [

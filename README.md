@@ -1,4 +1,4 @@
-# NRA orders XML generator library
+# NRA Orders Audit XML File Generator
 
 ##Usage:
 ```php

@@ -1,6 +1,6 @@
 # NRA Orders Audit XML File Generator
 
-##Usage:
+## Usage:
 ```php
 $shop = new \Odit\Shop($eik, $shopUniqueNumber, $domain, $shopCreatedAt, $isMarketplace, $yearOfOdit, $monthOfOdit);
 $order = new \Odit\Order($orderUniqueNumber, $orderDate, $documentNumber, $documentDate, $totalDiscount, $paymentType, $items, $virtualPosNumber, $transactionNumber, $paymentProcessrIdentifier);

@@ -144,7 +144,7 @@ class Order
             $total+=$item->getPrice();
         }
 
-        return $total; //TODO apply discount
+        return $total;
     }
 
     public function getOrderTotalVat()
@@ -164,6 +164,6 @@ class Order
             $total+=$item->getFinalPrice();
         }
 
-        return $total; //TODO apply discount
+        return $total;
     }
 }

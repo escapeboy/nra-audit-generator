@@ -22,7 +22,7 @@ class XmlConverter
         $xml->writeElement('eik', $shop->getEik());
         $xml->writeElement('e_shop_n', $shop->getShopUniqueNumber());
         $xml->writeElement('domain_name', $shop->getDomain());
-        $xml->writeElement('creation_date', $shop->getShopCreatedAt()->format('Y-m-d'));
+        $xml->writeElement('creation_date', $shop->getFileCreatedAt()->format('Y-m-d'));
         $xml->writeElement('mon', str_pad((string)$shop->getMonth(), 2, '0', STR_PAD_LEFT));
         $xml->writeElement('god', (string)$shop->getYear());
         $xml->writeElement('e_shop_type', $shop->isMarketplace() ? '2' : '1');

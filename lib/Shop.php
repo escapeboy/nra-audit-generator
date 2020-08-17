@@ -11,7 +11,7 @@ class Shop
 
     private string $domain;
 
-    private \DateTime $shopCreatedAt;
+    private \DateTime $fileCreatedAt;
 
     private bool $isMarketplace;
 
@@ -33,7 +33,7 @@ class Shop
         string $eik,
         string $shopUniqueNumber,
         string $domain,
-        \DateTime $shopCreatedAt,
+        \DateTime $fileCreatedAt,
         bool $isMarketplace,
         int $year,
         int $month,
@@ -43,7 +43,7 @@ class Shop
         $this->eik = $eik;
         $this->shopUniqueNumber = $shopUniqueNumber;
         $this->domain = $domain;
-        $this->shopCreatedAt = $shopCreatedAt;
+        $this->fileCreatedAt = $fileCreatedAt;
         $this->isMarketplace = $isMarketplace;
         $this->year = $year;
         $this->month = $month;
@@ -78,9 +78,9 @@ class Shop
     /**
      * @return \DateTime
      */
-    public function getShopCreatedAt(): \DateTime
+    public function getFileCreatedAt(): \DateTime
     {
-        return $this->shopCreatedAt;
+        return $this->fileCreatedAt;
     }
 
     /**

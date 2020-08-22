@@ -31,6 +31,11 @@ $xml = (string) \Audit\XmlConverter::convert($shop);
 \Audit\ReturnMethods\Cash::class; //3
 \Audit\ReturnMethods\Other::class; //4
 ```
+### Plugins for popular platforms using this library
+If you created a plugin with this library - ping me or create a pull request to be added here.
+
+### Other related plugins
+  * [WooCommerce Наредба Н-18 облекчен режим плъгин (PAID)](https://mreja.net/produkt/woocommerce-наредба-н-18-облекчен-режим-плъгин/)
 
 Hey! You can send me money on Revolut by following this link: 
 https://pay.revolut.com/profile/nukolaqzi

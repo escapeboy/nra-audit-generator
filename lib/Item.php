@@ -59,7 +59,7 @@ class Item
 
     public function getVat(): float
     {
-        return $this->vatRate * $this->price / 100;
+        return ($this->vatRate * $this->price / 100) * $this->quantity;
     }
 
     public function getFinalPrice(): float

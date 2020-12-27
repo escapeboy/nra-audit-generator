@@ -151,7 +151,7 @@ class Order
     {
         $total = 0;
         foreach($this->items as $item){
-            $total+=$item->getVat() * $item->getQuantity();
+            $total+=$item->getVat();
         }
 
         return $total;

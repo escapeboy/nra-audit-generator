@@ -48,8 +48,8 @@ class XmlConverter
             $xml->endElement();
 
             $xml->writeElement('ord_total1', number_format($order->getTotalWithoutVat(), 2));
-            $xml->writeElement('ord_disc', (string)$order->getTotalDiscount());
-            $xml->writeElement('ord_vat', (string)$order->getOrderTotalVat());
+            $xml->writeElement('ord_disc', number_format($order->getTotalDiscount(), 2));
+            $xml->writeElement('ord_vat', number_format($order->getOrderTotalVat(), 2));
             $xml->writeElement('ord_total2', number_format($order->getOrderTotal(), 2));
             $xml->writeElement('paym', (string)$order->getPaymentType()::CODE);
             if ($order->getVirtualPosNumber()) {

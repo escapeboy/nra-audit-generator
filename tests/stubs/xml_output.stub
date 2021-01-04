@@ -17,23 +17,23 @@
 				<artenum>
 					<art_name>кифла</art_name>
 					<art_quant>1</art_quant>
-					<art_price>1</art_price>
+					<art_price>1.00</art_price>
 					<art_vat_rate>20</art_vat_rate>
-					<art_vat>0.2</art_vat>
+					<art_vat>0.20</art_vat>
 					<art_sum>1.20</art_sum>
 				</artenum>
 				<artenum>
 					<art_name>сокче</art_name>
 					<art_quant>1</art_quant>
-					<art_price>1</art_price>
+					<art_price>1.00</art_price>
 					<art_vat_rate>20</art_vat_rate>
-					<art_vat>0.2</art_vat>
+					<art_vat>0.20</art_vat>
 					<art_sum>1.20</art_sum>
 				</artenum>
 			</art>
-			<ord_total1>2</ord_total1>
-			<ord_disc>0</ord_disc>
-			<ord_vat>0.4</ord_vat>
+			<ord_total1>2.00</ord_total1>
+			<ord_disc>0.00</ord_disc>
+			<ord_vat>0.40</ord_vat>
 			<ord_total2>2.40</ord_total2>
 			<paym>2</paym>
 			<pos_n>222</pos_n>

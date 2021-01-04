@@ -39,15 +39,15 @@ class XmlConverter
                 $xml->startElement('artenum');
                 $xml->writeElement('art_name', $item->getName());
                 $xml->writeElement('art_quant', (string)$item->getQuantity());
-                $xml->writeElement('art_price', (string)$item->getPrice());
+                $xml->writeElement('art_price', number_format($item->getPrice(), 2));
                 $xml->writeElement('art_vat_rate', (string)$item->getVatRate());
-                $xml->writeElement('art_vat', (string)$item->getVat());
+                $xml->writeElement('art_vat', number_format($item->getVat(), 2));
                 $xml->writeElement('art_sum', number_format($item->getFinalPrice(), 2));
                 $xml->endElement();
             }
             $xml->endElement();
 
-            $xml->writeElement('ord_total1', (string)$order->getTotalWithoutVat());
+            $xml->writeElement('ord_total1', number_format($order->getTotalWithoutVat(), 2));
             $xml->writeElement('ord_disc', (string)$order->getTotalDiscount());
             $xml->writeElement('ord_vat', (string)$order->getOrderTotalVat());
             $xml->writeElement('ord_total2', number_format($order->getOrderTotal(), 2));

@@ -22,6 +22,7 @@ $xml = (string) \Audit\XmlConverter::convert($shop);
 \Audit\PaymentTypes\WithPostPayment::class; //3
 \Audit\PaymentTypes\PaymentService::class; //4
 \Audit\PaymentTypes\Other::class; //5
+\Audit\PaymentTypes\ReflectedWithReceipt::class; //6
 ```
 
 ## Return methods

@@ -37,6 +37,8 @@ If you created a plugin with this library - ping me or create a pull request to 
 
 ### Other related plugins
   * [WooCommerce Наредба Н-18 облекчен режим плъгин (PAID)](https://mreja.net/produkt/woocommerce-наредба-н-18-облекчен-режим-плъгин/)
+  * [Bulgarisation for WooCommerce (FREE)](https://bg.wordpress.org/plugins/bulgarisation-for-woocommerce/)
+  * [Модул за Наредба Н-18 за WooCommerce](https://webtitan.bg/produkt/modul-za-naredba-n18-woocommerce/)
 
 Hey! You can send me money on Revolut by following this link:
 https://pay.revolut.com/katsarov
